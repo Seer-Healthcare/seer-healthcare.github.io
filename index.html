@@ -1,115 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seer Healthcare</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H75PXLTK6S"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seer Healthcare</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H75PXLTK6S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag("config", "G-H75PXLTK6S");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TGPJRKGL");
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
 
-  gtag('config', 'G-H75PXLTK6S');
-</script>
-  <!-- Google Tag Manager -->
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];
-                       w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});
-                       var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-                       j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TGPJRKGL');
-</script>
-<!-- End Google Tag Manager -->
-  <style>
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
+      .bgimg {
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: rgb(220, 220, 220);
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+      }
 
-    .bgimg {
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-      position: relative;
-      color: rgb(220, 220, 220);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 25px;
-    }
+      .bgblack {
+        background-color: black;
+      }
 
-    .grad5 {
-      background-color: black;
-      /* For browsers that do not support gradients */
-      background: radial-gradient(closest-side, #000000, #353535, #151515);
-    }
+      .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+      }
 
-    .bgblack {
-      background-color: black;
-    }
-    
-    .topleft {
-      position: absolute;
-      top: 0;
-      left: 16px;
-    }
+      .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+      }
 
-    .bottomleft {
-      position: absolute;
-      bottom: 0;
-      left: 16px;
-    }
+      .bottommiddle {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        text-align: center;
+      }
 
-    .middle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
-</head>
+      .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGPJRKGL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div class="bgimg bgblack">
-    <div class="topleft"></div>
-    <div class="middle">
-      <div>
-        <img src="/images/seer_crystal_ball_black.png" width="150" height="150" />
+      :root {
+        color-scheme: dark;
+      }
+
+      input[type="email"] {
+        padding: 5px;
+        border: 2px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+
+      button[type="submit"] {
+        padding: 5px 15px;
+        border: 0;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TGPJRKGL"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="bgimg bgblack">
+      <div class="middle">
+        <div>
+          <img
+            src="/images/seer_crystal_ball_black.png"
+            width="150"
+            height="150"
+          />
+        </div>
+        <span style="font-size: 48px; font-weight: bold">Project Crystal</span
+        ><br />
+        <span style="font-size: 18px">Coming into focus August 1, 2024</span
+        ><br />
+        <span style="font-size: 14px" id="countdown">&nbsp;</span>
+
+        <p style="font-size: 14px">&nbsp;</p>
+        <p style="font-size: 14px">&nbsp;</p>
+        <p style="font-size: 14px">&nbsp;</p>
+        <div style="font-size: 14px">
+          Enter your email to be notified when Seer launches
+        </div>
+        <form
+          id="my-form"
+          action="https://formspree.io/f/xnqezdld"
+          method="POST"
+          autocomplete="off"
+        >
+          <div>
+            <input
+              name="username"
+              name="Email"
+              id="email"
+              type="email"
+              size="30"
+            />
+            <button type="submit">Submit</button>
+          </div>
+          <p id="my-form-status" style="font-size: 14px">&nbsp;</p>
+        </form>
       </div>
-      <span style="font-size: 48px; font-weight: bold;">Project Crystal</span><br />
-      <span style="font-size: 18px">Coming into focus August 1, 2024</span><br />
-      <span style="font-size: 14px" id="countdown"></span>
     </div>
-    <div class="bottomleft"></div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
-    integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    const countdownfunction2 = setInterval(function () {
-      const targetTime = moment("2024-08-01");
-      const timeBetween = moment.duration(targetTime.diff(moment()));
-      document.getElementById(
-        "countdown"
-      ).innerHTML = `${timeBetween.months()}m ${timeBetween.days()}d ${timeBetween.hours()}h ${timeBetween.minutes()}min ${timeBetween.seconds()}s`;
-    }, 1000);
-  </script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+      integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const countdownfunction2 = setInterval(function () {
+        const targetTime = moment("2024-08-01");
+        const timeBetween = moment.duration(targetTime.diff(moment()));
+        document.getElementById(
+          "countdown"
+        ).innerHTML = `${timeBetween.months()}m ${timeBetween.days()}d ${timeBetween.hours()}h ${timeBetween.minutes()}min ${timeBetween.seconds()}s`;
+      }, 1000);
 
+      var form = document.getElementById("my-form");
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your interest!";
+              form.reset();
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML =
+                    "Oops! There was a problem submitting your form";
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
 </html>
